@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diet Soda | Pure Zero Refreshment</title>
-<meta name="description" content="Experience the crisp, clean taste of Diet Soda. Zero sugar, zero compromise.">
+<title>Urban Supply</title>
+<!-- <meta name="description" content="Experience the crisp, clean taste of Diet Soda. Zero sugar, zero compromise."> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Inter:wght@400;500&family=Manrope:wght@400;700&family=Galada&display=swap" rel="stylesheet">
@@ -316,7 +316,9 @@ body {
     gap: 1rem;
 }
 
-#view-home.page-view.active {
+#view-home.page-view.active,
+#view-ingredients.page-view.active,
+#view-taste.page-view.active {
     display: flex !important;
     flex-direction: column;
     overflow-y: auto;
@@ -501,7 +503,8 @@ body {
     outline: none;
     object-fit: contain;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    /* transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); */
+    will-change: transform;
 }
 
 .berry.no-animation { animation: none !important; }
@@ -697,7 +700,7 @@ body {
             </div>
 
             <div class="hero-center">
-                <img src="coffee.png" alt="Iced Coffee" class="main-product-3d">
+                <img src="burntmood.png" alt="Iced Coffee" class="main-product-3d">
             </div>
 
             <div class="berries-container">
@@ -717,10 +720,10 @@ body {
                         <button class="nav-arrow nav-next">→</button>
                     </div>
                 </div>
-                <h2 class="side-title large-animation-1">
+                <!-- <h2 class="side-title large-animation-1">
                     <span class="outline">Refreshingly</span><br>
                     Clean
-                </h2>
+                </h2> -->
             </div>
 
         </div>
@@ -743,133 +746,169 @@ body {
     </section>
 </main>
 
-<section class="hero page-view" id="view-ingredients">
-    <div class="hero-content">
+<main class="page-view" id="view-ingredients">
+    <div class="hero-viewport">
+        <div class="hero-content">
 
-        <!-- <div class="leaves-container">
-            <model-viewer class="leaf l1" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="45deg 75deg 105%"></model-viewer>
-            <model-viewer class="leaf l2" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="-30deg 60deg 105%"></model-viewer>
-            <model-viewer class="leaf l3" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="120deg 85deg 105%"></model-viewer>
-            <model-viewer class="leaf l4" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="10deg 45deg 105%"></model-viewer>
-        </div> -->
+            <!-- <div class="leaves-container">
+                <model-viewer class="leaf l1" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="45deg 75deg 105%"></model-viewer>
+                <model-viewer class="leaf l2" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="-30deg 60deg 105%"></model-viewer>
+                <model-viewer class="leaf l3" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="120deg 85deg 105%"></model-viewer>
+                <model-viewer class="leaf l4" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="10deg 45deg 105%"></model-viewer>
+            </div> -->
 
-        <div class="hero-left">
-            <h1 class="main-title large-animation-1">
-                <span class="outline hero-title-top">Pure</span><br>
-                <span class="hero-title-bottom">Zero</span>
-            </h1>
-            <p class="description">
-                Unleash the crisp taste of zero sugar. <br>
-                Refreshment redefined in every bubble — <br>
-                all in one sleek design.
-            </p>
-            <div class="cta-group">
-                <button class="primary-btn">
-                    Shop Now
-                    <span class="plus-icon">+</span>
-                </button>
-            </div>
-        </div>
-
-        <div class="berries-container-bg">
-            <img class="berry b7" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b8" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b9" src="coffeebeans.png" alt="Coffee Bean">
-        </div>
-
-        <div class="hero-center">
-            <img src="coffee.png" alt="Iced Coffee" class="main-product-3d">
-        </div>
-
-        <div class="berries-container">
-            <img class="berry b1" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b2" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b3" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b4" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b5" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b6" src="coffeebeans.png" alt="Coffee Bean">
-        </div>
-
-        <div class="hero-right">
-            <div class="product-carousel">
-                <div class="carousel-cards"><!-- diisi otomatis oleh JS dari kamus MENUS sesuai halaman --></div>
-                <div class="carousel-nav">
-                    <button class="nav-arrow nav-prev">←</button>
-                    <button class="nav-arrow nav-next">→</button>
+            <div class="hero-left">
+                <h1 class="main-title large-animation-1">
+                    <span class="outline hero-title-top">Pure</span><br>
+                    <span class="hero-title-bottom">Zero</span>
+                </h1>
+                <p class="description">
+                    Unleash the crisp taste of zero sugar. <br>
+                    Refreshment redefined in every bubble — <br>
+                    all in one sleek design.
+                </p>
+                <div class="cta-group">
+                    <button class="primary-btn">
+                        Shop Now
+                        <span class="plus-icon">+</span>
+                    </button>
                 </div>
             </div>
-            <h2 class="side-title large-animation-1">
-                <span class="outline">Refreshingly</span><br>
-                Clean
-            </h2>
-        </div>
 
-    </div>
-</section>
-
-<section class="hero page-view" id="view-taste">
-    <div class="hero-content">
-
-        <!-- <div class="leaves-container">
-            <model-viewer class="leaf l1" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="45deg 75deg 105%"></model-viewer>
-            <model-viewer class="leaf l2" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="-30deg 60deg 105%"></model-viewer>
-            <model-viewer class="leaf l3" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="120deg 85deg 105%"></model-viewer>
-            <model-viewer class="leaf l4" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="10deg 45deg 105%"></model-viewer>
-        </div> -->
-
-        <div class="hero-left">
-            <h1 class="main-title large-animation-1">
-                <span class="outline hero-title-top">Pure</span><br>
-                <span class="hero-title-bottom">Zero</span>
-            </h1>
-            <p class="description">
-                Unleash the crisp taste of zero sugar. <br>
-                Refreshment redefined in every bubble — <br>
-                all in one sleek design.
-            </p>
-            <div class="cta-group">
-                <button class="primary-btn">
-                    Shop Now
-                    <span class="plus-icon">+</span>
-                </button>
+            <div class="berries-container-bg">
+                <img class="berry b7" src="ube.png" alt="Coffee Bean">
+                <img class="berry b8" src="ube.png" alt="Coffee Bean">
+                <img class="berry b9" src="ube.png" alt="Coffee Bean">
             </div>
-        </div>
 
-        <div class="berries-container-bg">
-            <img class="berry b7" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b8" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b9" src="coffeebeans.png" alt="Coffee Bean">
-        </div>
+            <div class="hero-center">
+                <img src="ubematcha.png" alt="Iced Coffee" class="main-product-3d">
+            </div>
 
-        <div class="hero-center">
-            <img src="coffee.png" alt="Iced Coffee" class="main-product-3d">
-        </div>
+            <div class="berries-container">
+                <img class="berry b1" src="ube.png" alt="Coffee Bean">
+                <img class="berry b2" src="ube.png" alt="Coffee Bean">
+                <img class="berry b3" src="ube.png" alt="Coffee Bean">
+                <img class="berry b4" src="ube.png" alt="Coffee Bean">
+                <img class="berry b5" src="ube.png" alt="Coffee Bean">
+                <img class="berry b6" src="ube.png" alt="Coffee Bean">
+            </div>
 
-        <div class="berries-container">
-            <img class="berry b1" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b2" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b3" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b4" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b5" src="coffeebeans.png" alt="Coffee Bean">
-            <img class="berry b6" src="coffeebeans.png" alt="Coffee Bean">
-        </div>
+            <div class="hero-right">
+                <div class="product-carousel">
+                    <div class="carousel-cards"><!-- diisi otomatis oleh JS dari kamus MENUS sesuai halaman --></div>
+                    <div class="carousel-nav">
+                        <button class="nav-arrow nav-prev">←</button>
+                        <button class="nav-arrow nav-next">→</button>
+                    </div>
+                </div>
+                <!-- <h2 class="side-title large-animation-1">
+                    <span class="outline">Refreshingly</span><br>
+                    Clean
+                </h2> -->
+            </div>
 
-        <div class="hero-right">
-            <div class="product-carousel">
-                <div class="carousel-cards"><!-- diisi otomatis oleh JS dari kamus MENUS sesuai halaman --></div>
-                <div class="carousel-nav">
-                    <button class="nav-arrow nav-prev">←</button>
-                    <button class="nav-arrow nav-next">→</button>
+        </div>
+    </div>
+
+    <section class="home-ingredients-section">
+        <div class="section-beans" aria-hidden="true">
+            <img src="ube.png" alt="" style="width:170px; top:4%; left:6%; --r:-15deg;">
+            <img src="ube.png" alt="" style="width:110px; top:58%; left:10%; --r:20deg; animation-duration:11s; --d:-3s;">
+            <img src="ube.png" alt="" style="width:210px; top:6%; right:7%; --r:10deg; animation-duration:12s; --d:-5s;">
+            <img src="ube.png" alt="" style="width:130px; bottom:6%; right:14%; --r:-25deg; animation-duration:9s; --d:-2s;">
+            <img src="ube.png" alt="" style="width:95px; bottom:12%; left:42%; --r:35deg; animation-duration:13s; --d:-6s;">
+            <img src="ube.png" alt="" style="width:150px; top:38%; left:78%; --r:-10deg; animation-duration:10s; --d:-1s;">
+        </div>
+        <div class="section-inner">
+            <h2 class="page-title">Ingredients</h2>
+            <p class="page-subtitle" id="noncoffee-ingredients-subtitle"></p>
+            <div class="info-grid" id="noncoffee-ingredients-grid"></div>
+        </div>
+    </section>
+</main>
+
+<main class="page-view" id="view-taste">
+    <div class="hero-viewport">
+        <div class="hero-content">
+
+            <!-- <div class="leaves-container">
+                <model-viewer class="leaf l1" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="45deg 75deg 105%"></model-viewer>
+                <model-viewer class="leaf l2" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="-30deg 60deg 105%"></model-viewer>
+                <model-viewer class="leaf l3" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="120deg 85deg 105%"></model-viewer>
+                <model-viewer class="leaf l4" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="10deg 45deg 105%"></model-viewer>
+            </div> -->
+
+            <div class="hero-left">
+                <h1 class="main-title large-animation-1">
+                    <span class="outline hero-title-top">Pure</span><br>
+                    <span class="hero-title-bottom">Zero</span>
+                </h1>
+                <p class="description">
+                    Unleash the crisp taste of zero sugar. <br>
+                    Refreshment redefined in every bubble — <br>
+                    all in one sleek design.
+                </p>
+                <div class="cta-group">
+                    <button class="primary-btn">
+                        Shop Now
+                        <span class="plus-icon">+</span>
+                    </button>
                 </div>
             </div>
-            <h2 class="side-title large-animation-1">
-                <span class="outline">Refreshingly</span><br>
-                Clean
-            </h2>
-        </div>
 
+            <div class="berries-container-bg">
+                <img class="berry b7" src="coffeebeans.png" alt="Coffee Bean">
+                <img class="berry b8" src="coffeebeans.png" alt="Coffee Bean">
+                <img class="berry b9" src="coffeebeans.png" alt="Coffee Bean">
+            </div>
+
+            <div class="hero-center">
+                <img src="coffee.png" alt="Iced Coffee" class="main-product-3d">
+            </div>
+
+            <div class="berries-container">
+                <img class="berry b1" src="coffeebeans.png" alt="Coffee Bean">
+                <img class="berry b2" src="coffeebeans.png" alt="Coffee Bean">
+                <img class="berry b3" src="coffeebeans.png" alt="Coffee Bean">
+                <img class="berry b4" src="coffeebeans.png" alt="Coffee Bean">
+                <img class="berry b5" src="coffeebeans.png" alt="Coffee Bean">
+                <img class="berry b6" src="coffeebeans.png" alt="Coffee Bean">
+            </div>
+
+            <div class="hero-right">
+                <div class="product-carousel">
+                    <div class="carousel-cards"><!-- diisi otomatis oleh JS dari kamus MENUS sesuai halaman --></div>
+                    <div class="carousel-nav">
+                        <button class="nav-arrow nav-prev">←</button>
+                        <button class="nav-arrow nav-next">→</button>
+                    </div>
+                </div>
+                <!-- <h2 class="side-title large-animation-1">
+                    <span class="outline">Refreshingly</span><br>
+                    Clean
+                </h2> -->
+            </div>
+
+        </div>
     </div>
-</section>
+
+    <section class="home-ingredients-section">
+        <div class="section-beans" aria-hidden="true">
+            <img src="coffeebeans.png" alt="" style="width:170px; top:4%; left:6%; --r:-15deg;">
+            <img src="coffeebeans.png" alt="" style="width:110px; top:58%; left:10%; --r:20deg; animation-duration:11s; --d:-3s;">
+            <img src="coffeebeans.png" alt="" style="width:210px; top:6%; right:7%; --r:10deg; animation-duration:12s; --d:-5s;">
+            <img src="coffeebeans.png" alt="" style="width:130px; bottom:6%; right:14%; --r:-25deg; animation-duration:9s; --d:-2s;">
+            <img src="coffeebeans.png" alt="" style="width:95px; bottom:12%; left:42%; --r:35deg; animation-duration:13s; --d:-6s;">
+            <img src="coffeebeans.png" alt="" style="width:150px; top:38%; left:78%; --r:-10deg; animation-duration:10s; --d:-1s;">
+        </div>
+        <div class="section-inner">
+            <h2 class="page-title">Ingredients</h2>
+            <p class="page-subtitle" id="food-ingredients-subtitle"></p>
+            <div class="info-grid" id="food-ingredients-grid"></div>
+        </div>
+    </section>
+</main>
 
 <section class="page-view page-section" id="view-eco">
     <div class="section-beans" aria-hidden="true">
@@ -958,24 +997,24 @@ function getPageEls(pageKey) {
 // - content: (opsional) hanya dipakai oleh halaman Coffee/home untuk mengisi
 //   grid "Ingredients" di bawah hero-nya.
 const MENUS = {
-    // ------- Halaman "Coffee" (view-home) -------
+    // ------- Halaman "Coffee"  -------
     home: {
-        kopiSusu: {
-            name: 'Kopi Susu',
-            titleTop: 'Kopi',
-            titleBottom: 'Susu',
+        burntMood: {
+            name: 'Burnt Mood',
+            titleTop: 'Burnt',
+            titleBottom: 'Mood',
             price: 'Rp.28.000',
-            productImg: 'coffee.png',
+            productImg: 'burntmood.png',
             berryImg: 'coffeebeans.png',
             colors: { inner: '#8a5a2b', mid: '#4e2f16', outer: '#150d06' },
             content: {
                 ingredients: {
-                    subtitle: 'Racikan kopi robusta pilihan dipadukan gula aren asli dan susu segar.',
+                    subtitle: 'Kopi pekat bertemu krim halus, menggunakan topping lapisan karamel gosong yang renyah. Pahitnya dapat, manisnya juga dapat.',
                     cards: [
-                        { title: 'Kopi Robusta', text: 'Biji kopi pilihan dengan body yang kuat.' },
-                        { title: 'Gula Aren Asli', text: 'Manis alami dengan aroma karamel.' },
-                        { title: 'Susu Segar', text: 'Menambah tekstur creamy di setiap tegukan.' },
-                        { title: 'Es Batu Kristal', text: 'Disajikan dingin dan menyegarkan.' }
+                        { title: 'Espresso Shot', text: 'Ekstraksi kopi pekat sebagai basis rasa.' },
+                        { title: 'Smooth Cream', text: 'Krim lembut yang menyeimbangkan pahitnya kopi.' },
+                        { title: 'Caramelized Top', text: 'Lapisan gula yang dibakar, renyah di atas dan manis gurih.' }
+                        // { title: 'Es Batu Kristal', text: 'Disajikan dingin dan menyegarkan.' }
                     ]
                 },
                 taste: {
@@ -1085,16 +1124,27 @@ const MENUS = {
         }
     },
 
-    // ------- Halaman "Non Coffee" (view-ingredients) -------
+    // ------- Halaman "Non Coffee" -------
     ingredients: {
         matchaLatte: {
-            name: 'Matcha Latte',
-            titleTop: 'Matcha',
-            titleBottom: 'Latte',
+            name: 'Ube Matcha',
+            titleTop: 'Ube',
+            titleBottom: 'Matcha',
             price: 'Rp.28.000',
-            productImg: 'coffee.png',
-            berryImg: 'coffeebeans.png',
-            colors: { inner: '#4f8a2b', mid: '#294e16', outer: '#0c1406' }
+            productImg: 'ubematcha.png',
+            berryImg: 'ube.png',
+            colors: { inner: '#8a4fb5', mid: '#4a2468', outer: '#130a1c' },
+            content: {
+                ingredients: {
+                    subtitle: 'Perpaduan ube yang creamy dan matcha premium dengan susu segar, disajikan berlapis.',
+                    cards: [
+                        { title: 'Creamy Ube', text: 'Rasa manis lembut dengan warna ungu khas di dasar gelas.' },
+                        { title: 'Matcha', text: 'Teh hijau Jepang dengan rasa earthy dan sedikit pahit.' },
+                        { title: 'Fresh Milk', text: 'Susu segar yang menyatukan kedua rasa.' }
+                        // { title: 'Es Batu Kristal', text: 'Disajikan dingin dan menyegarkan.' }
+                    ]
+                }
+            }
         },
         chocoMalt: {
             name: 'Choco Malt',
@@ -1103,7 +1153,18 @@ const MENUS = {
             price: 'Rp.28.000',
             productImg: 'coffee.png',
             berryImg: 'coffeebeans.png',
-            colors: { inner: '#6b3a2b', mid: '#3a1e16', outer: '#100906' }
+            colors: { inner: '#6b3a2b', mid: '#3a1e16', outer: '#100906' },
+            content: {
+                ingredients: {
+                    subtitle: 'Cokelat pekat berpadu malt gurih manis, cocok untuk kamu yang suka rasa cokelat yang bold.',
+                    cards: [
+                        { title: 'Cokelat Premium', text: 'Bubuk cokelat dengan rasa pekat dan kaya.' },
+                        { title: 'Malt Powder', text: 'Memberi rasa gurih manis yang khas.' },
+                        { title: 'Susu Segar', text: 'Menambah tekstur creamy di setiap tegukan.' },
+                        { title: 'Es Batu Kristal', text: 'Disajikan dingin dan menyegarkan.' }
+                    ]
+                }
+            }
         },
         taroMilk: {
             name: 'Taro Milk',
@@ -1112,11 +1173,22 @@ const MENUS = {
             price: 'Rp.28.000',
             productImg: 'coffee.png',
             berryImg: 'coffeebeans.png',
-            colors: { inner: '#6a3f8a', mid: '#3a234e', outer: '#0f0916' }
+            colors: { inner: '#6a3f8a', mid: '#3a234e', outer: '#0f0916' },
+            content: {
+                ingredients: {
+                    subtitle: 'Susu lembut dengan rasa talas manis gurih dan warna ungu yang cantik.',
+                    cards: [
+                        { title: 'Pasta Talas', text: 'Talas pilihan dengan rasa manis gurih alami.' },
+                        { title: 'Susu Segar', text: 'Memberi rasa creamy yang lembut.' },
+                        { title: 'Gula Cair', text: 'Manis pas tanpa menutupi rasa talas.' },
+                        { title: 'Es Batu Kristal', text: 'Disajikan dingin dan menyegarkan.' }
+                    ]
+                }
+            }
         }
     },
 
-    // ------- Halaman "Food" (view-taste) -------
+    // ------- Halaman "Food" -------
     taste: {
         croissant: {
             name: 'Nasi Goreng',
@@ -1125,7 +1197,18 @@ const MENUS = {
             price: 'Rp.28.000',
             productImg: 'coffee.png',
             berryImg: 'coffeebeans.png',
-            colors: { inner: '#8a7a2b', mid: '#4e4416', outer: '#141106' }
+            colors: { inner: '#8a7a2b', mid: '#4e4416', outer: '#141106' },
+            content: {
+                ingredients: {
+                    subtitle: 'Nasi goreng dengan bumbu rempah khas, dimasak dengan api besar supaya harum dan gurih.',
+                    cards: [
+                        { title: 'Nasi Pulen', text: 'Nasi pilihan yang digoreng hingga harum.' },
+                        { title: 'Bumbu Rempah', text: 'Bawang, cabai, dan kecap manis untuk rasa khas.' },
+                        { title: 'Telur Ceplok', text: 'Menambah rasa gurih dan protein.' },
+                        { title: 'Kerupuk & Acar', text: 'Pelengkap renyah dan segar.' }
+                    ]
+                }
+            }
         },
         sandwich: {
             name: 'Burger Ayam',
@@ -1134,7 +1217,18 @@ const MENUS = {
             price: 'Rp.28.000',
             productImg: 'coffee.png',
             berryImg: 'coffeebeans.png',
-            colors: { inner: '#8a5a2b', mid: '#4e3216', outer: '#140d06' }
+            colors: { inner: '#8a5a2b', mid: '#4e3216', outer: '#140d06' },
+            content: {
+                ingredients: {
+                    subtitle: 'Burger dengan patty ayam juicy, sayuran segar, dan saus spesial di dalam roti yang lembut.',
+                    cards: [
+                        { title: 'Patty Ayam', text: 'Daging ayam berbumbu, juicy dan renyah.' },
+                        { title: 'Roti Burger', text: 'Roti empuk yang dipanggang hangat.' },
+                        { title: 'Sayur Segar', text: 'Selada dan tomat untuk rasa segar.' },
+                        { title: 'Saus Spesial', text: 'Perpaduan saus gurih dan sedikit manis.' }
+                    ]
+                }
+            }
         },
         donut: {
             name: 'Nasi Ayam',
@@ -1143,7 +1237,18 @@ const MENUS = {
             price: 'Rp.28.000',
             productImg: 'coffee.png',
             berryImg: 'coffeebeans.png',
-            colors: { inner: '#6b4530', mid: '#3a2418', outer: '#0f0805' }
+            colors: { inner: '#6b4530', mid: '#3a2418', outer: '#0f0805' },
+            content: {
+                ingredients: {
+                    subtitle: 'Nasi hangat dengan ayam berbumbu, disajikan lengkap dengan sambal dan lalapan.',
+                    cards: [
+                        { title: 'Nasi Hangat', text: 'Nasi pulen sebagai dasar hidangan.' },
+                        { title: 'Ayam Berbumbu', text: 'Ayam yang dimasak dengan bumbu meresap.' },
+                        { title: 'Sambal Racik', text: 'Pedas segar untuk melengkapi rasa.' },
+                        { title: 'Lalapan Segar', text: 'Timun dan selada sebagai penyegar.' }
+                    ]
+                }
+            }
         }
     }
 };
@@ -1185,19 +1290,28 @@ function renderHeroTitle(pageKey, flavorKey, animate = true) {
     titleBottom.forEach(el => animateTitleSwap(el, bottomText, 0.1));
 }
 
-// --- Konten section Eco/Reviews (kartu info) + Ingredients (sekarang di dalam Home) ---
-// "taste" tidak lagi punya elemen sendiri karena section Taste kini salinan hero Home.
-const CONTENT_TARGETS = [
-    { key: 'ingredients', subtitleId: 'home-ingredients-subtitle', gridId: 'home-ingredients-grid' },
-    { key: 'eco', subtitleId: 'eco-subtitle', gridId: 'eco-grid' },
-    { key: 'reviews', subtitleId: 'reviews-subtitle', gridId: 'reviews-grid' }
-];
+// --- Konten section Ingredients (semua halaman) + Eco/Reviews (hanya Coffee) ---
+// Prefix id elemen Ingredients untuk tiap halaman:
+// Coffee (home) -> home-ingredients-*, Non Coffee -> noncoffee-ingredients-*, Food -> food-ingredients-*
+const INGREDIENT_PREFIX = { home: 'home', ingredients: 'noncoffee', taste: 'food' };
 
-function renderFlavorContent(flavorKey) {
-    const config = MENUS.home[flavorKey];
+function renderFlavorContent(pageKey, flavorKey) {
+    const config = MENUS[pageKey] && MENUS[pageKey][flavorKey];
     if (!config || !config.content) return;
 
-    CONTENT_TARGETS.forEach(({ key, subtitleId, gridId }) => {
+    const prefix = INGREDIENT_PREFIX[pageKey];
+    const targets = [
+        { key: 'ingredients', subtitleId: `${prefix}-ingredients-subtitle`, gridId: `${prefix}-ingredients-grid` }
+    ];
+    // Eco & Reviews hanya ada di halaman Coffee (home)
+    if (pageKey === 'home') {
+        targets.push(
+            { key: 'eco', subtitleId: 'eco-subtitle', gridId: 'eco-grid' },
+            { key: 'reviews', subtitleId: 'reviews-subtitle', gridId: 'reviews-grid' }
+        );
+    }
+
+    targets.forEach(({ key, subtitleId, gridId }) => {
         const pageContent = config.content[key];
         if (!pageContent) return;
 
@@ -1287,7 +1401,7 @@ PAGE_KEYS.forEach(pageKey => {
     renderCarouselCards(pageKey);
     renderHeroTitle(pageKey, pageState[pageKey].flavor, false);
 });
-renderFlavorContent(pageState.home.flavor);
+PAGE_KEYS.forEach(pageKey => renderFlavorContent(pageKey, pageState[pageKey].flavor));
 
 // Warna latar awal mengikuti rasa halaman Home (halaman yang aktif saat load)
 gsap.set(document.body, {
@@ -1307,7 +1421,7 @@ async function switchFlavor(pageKey, flavor) {
     pageState[pageKey].flavor = flavor;
     pageState[pageKey].colors = config.colors;
 
-    if (pageKey === 'home') renderFlavorContent(flavor);
+    renderFlavorContent(pageKey, flavor);
     renderHeroTitle(pageKey, flavor);
 
     const body = document.body;
@@ -1456,7 +1570,7 @@ function animate() {
     allBerries.forEach((berry, i) => {
         const pageEl = berry.closest('.page-view');
         const pageKey = pageEl ? pageEl.id.replace('view-', '') : null;
-        if (pageKey && isSwitching[pageKey]) return;
+        if (pageKey && (isSwitching[pageKey] || !isPageActive(pageKey))) return;
 
         const berryRect = berry.getBoundingClientRect();
         const berryX = berryRect.left + berryRect.width / 2;
